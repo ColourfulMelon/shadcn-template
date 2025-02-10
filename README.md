@@ -15,3 +15,4 @@ Template with basic packages installed and set up
 Todo:
 - `Update favicon`
 - `Update metadata in layout.tsx`
+- Change SITE_URL in .env
