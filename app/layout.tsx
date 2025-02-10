@@ -18,41 +18,44 @@ const openGraph: OpenGraph = {
     title: 'OpenGraphTitle',
     description: 'OpenGraphDescription',
     type: 'article',
-    publishedTime: '2025-01-28T13:28:27+00:00',
-    modifiedTime: '2025-01-28T13:28:27+00:00',
-    ttl: 20,
-    audio: [{
-        url: 'OpenGraphAudioURL',
-        secureUrl: 'OpenGraphAudioSecureURL',
-        href: 'OpenGraphAudioHref',
-        host: 'OpenGraphAudioHost',
-        
-    }],
-    emails: ['OpenGraphEmails'],
-    countryName: 'OpenGraphCountryName',
-    tags: ['OpenGraphTags'],
-    phoneNumbers: ['OpenGraphPhoneNumbers'],
-    locale: 'OpenGraphLocale',
-    expirationTime: '2025-01-28T13:28:27+00:00',
-    section: 'OpenGraphSection',
-    faxNumbers: ['OpenGraphFaxNumbers'],
-    determiner: 'the',
-    alternateLocale: 'OpenGraphAlternateLocale',
-    
-    
-    
-    videos: [{
-        url: 'OpenGraphVideoURL',
-        secureUrl: 'OpenGraphVideoSecureURL',
-    }],
-    authors: ['OpenGraphAuthors'],
     siteName: 'OpenGraphSiteName',
-    url: 'OpenGraphURL',
-    images: [{  url: 'https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg', width: 1200, height: 630, alt: 'OpenGraphImageAlt',
-    secureUrl: 'https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg',
-    type: 'image/jpeg'
+    url: 'https://google.com',
     
-    }],
+    
+    // publishedTime: '2025-01-28T13:28:27+00:00',
+    // modifiedTime: '2025-01-28T13:28:27+00:00',
+    // ttl: 20,
+    // audio: [{
+    //     url: 'OpenGraphAudioURL',
+    //     secureUrl: 'OpenGraphAudioSecureURL',
+    //     href: 'OpenGraphAudioHref',
+    //     host: 'OpenGraphAudioHost',
+    //
+    // }],
+    //
+    // emails: ['OpenGraphEmails'],
+    // countryName: 'OpenGraphCountryName',
+    // tags: ['OpenGraphTags'],
+    // phoneNumbers: ['OpenGraphPhoneNumbers'],
+    // locale: 'OpenGraphLocale',
+    // expirationTime: '2025-01-28T13:28:27+00:00',
+    // section: 'OpenGraphSection',
+    // faxNumbers: ['OpenGraphFaxNumbers'],
+    // determiner: 'the',
+    // alternateLocale: 'OpenGraphAlternateLocale',
+    
+    
+    
+    // videos: [{
+    //     url: 'OpenGraphVideoURL',
+    //     secureUrl: 'OpenGraphVideoSecureURL',
+    // }],
+    // authors: ['OpenGraphAuthors'],
+    // images: [{  url: 'https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg', width: 1200, height: 630, alt: 'OpenGraphImageAlt',
+    // secureUrl: 'https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg',
+    // type: 'image/jpeg'
+    //
+    // }],
     
     
     
@@ -62,52 +65,52 @@ export const metadata: Metadata = {
     title: 'title',
     description: 'description',
     creator: 'creator',
-    applicationName: 'applicationName',
-    abstract: 'abstract',
-    alternates: 'alternates' as AlternateURLs,
-    assets: 'assets',
-    authors: [{ name: 'Author', url: 'https://authorurl' }],
-    archives: 'archives',
-    bookmarks: 'bookmarks',
-    category: 'category',
-    // metadataBase: {}
-    // facebook: {}
-    icons: 'icons',
-    // itunes: {}
-    classification: 'classification',
-    generator: 'generator',
-    keywords: 'keywords',
-    manifest: 'manifest',
-    publisher: 'publisher',
-    robots: 'robots',
+    // applicationName: 'applicationName',
+    // abstract: 'abstract',
+    // alternates: 'alternates' as AlternateURLs,
+    // assets: 'assets',
+    // authors: [{ name: 'Author', url: 'https://authorurl' }],
+    // archives: 'archives',
+    // bookmarks: 'bookmarks',
+    // category: 'category',
+    // // metadataBase: {}
+    // // facebook: {}
+    // icons: 'icons',
+    // // itunes: {}
+    // classification: 'classification',
+    // generator: 'generator',
+    // keywords: 'keywords',
+    // manifest: 'manifest',
+    // publisher: 'publisher',
+    // robots: 'robots',
     openGraph: openGraph,
-    twitter: {
-        site: 'twitterSite',
-        title: 'twitterTitle',
-        description: 'twitterDescription',
-        creator: 'twitterCreator',
-        creatorId: 'twitterCreatorId',
-        siteId: 'twitterSiteId',
-        images: ["https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg"],
-        app: {
-            name: 'twitter_app',
-            id: {
-                iphone: 'twitter_app://iphone',
-                ipad: 'twitter_app://ipad',
-                googleplay: 'twitter_app://googleplay',
-            },
-            url: {
-                iphone: 'https://iphone_url/',
-                ipad: 'https://ipad_url/',
-            },
-        },
-        
-    },
-    formatDetection: {
-        email: false,
-        address: false,
-        telephone: false,
-    },
+    // twitter: {
+    //     site: 'twitterSite',
+    //     title: 'twitterTitle',
+    //     description: 'twitterDescription',
+    //     creator: 'twitterCreator',
+    //     creatorId: 'twitterCreatorId',
+    //     siteId: 'twitterSiteId',
+    //     images: ["https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg"],
+    //     app: {
+    //         name: 'twitter_app',
+    //         id: {
+    //             iphone: 'twitter_app://iphone',
+    //             ipad: 'twitter_app://ipad',
+    //             googleplay: 'twitter_app://googleplay',
+    //         },
+    //         url: {
+    //             iphone: 'https://iphone_url/',
+    //             ipad: 'https://ipad_url/',
+    //         },
+    //     },
+    //
+    // },
+    // formatDetection: {
+    //     email: false,
+    //     address: false,
+    //     telephone: false,
+    // },
 };
 
 export default function RootLayout({
