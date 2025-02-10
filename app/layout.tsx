@@ -44,6 +44,12 @@ export const metadata: Metadata = {
     publisher: 'publisher',
     robots: 'robots',
     openGraph: openGraph,
+    twitter: {
+        title: 'twitterTitle',
+        description: 'twitterDescription',
+        creator: 'twitterCreator',
+        creatorId: 'twitterCreatorId',
+    }
 };
 
 export default function RootLayout({
