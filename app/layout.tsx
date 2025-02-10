@@ -47,6 +47,7 @@ export const metadata: Metadata = {
     robots: 'robots',
     openGraph: openGraph,
     twitter: {
+        site: 'twitterSite',
         title: 'twitterTitle',
         description: 'twitterDescription',
         creator: 'twitterCreator',
