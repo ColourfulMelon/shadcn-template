@@ -36,8 +36,17 @@ export const metadata: Metadata = {
     manifest: 'manifest',
     publisher: 'publisher',
     robots: 'robots',
+    openGraph: {
+        title: 'OpenGraphTitle',
+        description: 'OpenGraphDescription',
+        type: 'website',
+        
+        
+        
+    }
 };
 
+gene
 export default function RootLayout({
     children,
 }: Readonly<{
