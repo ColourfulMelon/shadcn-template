@@ -50,6 +50,23 @@ export const metadata: Metadata = {
         creator: 'twitterCreator',
         creatorId: 'twitterCreatorId',
         siteId: 'twitterSiteId',
+        app: {
+            name: 'twitter_app',
+            id: {
+                iphone: 'twitter_app://iphone',
+                ipad: 'twitter_app://ipad',
+                googleplay: 'twitter_app://googleplay',
+            },
+            url: {
+                iphone: 'https://iphone_url/',
+                ipad: 'https://ipad_url/',
+            },
+        },
+    },
+    formatDetection: {
+        email: false,
+        address: false,
+        telephone: false,
     },
 };
 
