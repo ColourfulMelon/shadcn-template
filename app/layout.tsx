@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     abstract: 'abstract',
     alternates: 'alternates' as AlternateURLs,
     assets: 'assets',
-    authors: [{ name: 'Seb' }, { name: 'Josh', url: 'https://nextjs.org' }],
+    authors: [{ name: 'Author', url: 'https://authorurl' }],
     archives: 'archives',
     bookmarks: 'bookmarks',
     category: 'category',
