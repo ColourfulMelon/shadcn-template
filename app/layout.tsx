@@ -33,10 +33,10 @@ export const metadata: Metadata = {
     archives: 'archives',
     bookmarks: 'bookmarks',
     category: 'category',
-    metadataBase: 'metadataBase' as unknown as URL,
-    facebook: 'facebook' as unknown as Facebook,
+    // metadataBase: {}
+    // facebook: {}
     icons: 'icons',
-    itunes: 'itunes' as unknown as ItunesApp,
+    // itunes: {}
     classification: 'classification',
     generator: 'generator',
     keywords: 'keywords',
@@ -49,6 +49,7 @@ export const metadata: Metadata = {
         description: 'twitterDescription',
         creator: 'twitterCreator',
         creatorId: 'twitterCreatorId',
+        siteId: 'twitterSiteId',
     },
 };
 
