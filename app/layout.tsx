@@ -100,6 +100,7 @@ export default function RootLayout({
             <meta name="twitter:data1" content="twitter data 1"/>
             <meta name="twitter:label2" content="Time to read"/>
             <meta name="twitter:data2" content="1 minute"/>
+            <meta name="article:author" content="article Author"/>
             <meta property="og:updated_time" content="2025-01-28T13:28:27+00:00"/>
             
             <html lang="en">
