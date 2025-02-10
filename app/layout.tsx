@@ -24,7 +24,7 @@ const openGraph: OpenGraph = {
         url: 'OpenGraphVideoURL',
         secureUrl: 'OpenGraphVideoSecureURL',
     }],
-    authors: 'OpenGraphAuthors',
+    authors: ['OpenGraphAuthors'],
     siteName: 'OpenGraphSiteName',
     url: 'OpenGraphURL',
     images: [{  url: 'https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg', width: 1200, height: 630, alt: 'OpenGraphImageAlt',
