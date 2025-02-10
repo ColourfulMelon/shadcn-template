@@ -20,6 +20,27 @@ const openGraph: OpenGraph = {
     type: 'article',
     publishedTime: '2025-01-28T13:28:27+00:00',
     modifiedTime: '2025-01-28T13:28:27+00:00',
+    ttl: 20,
+    audio: [{
+        url: 'OpenGraphAudioURL',
+        secureUrl: 'OpenGraphAudioSecureURL',
+        href: 'OpenGraphAudioHref',
+        host: 'OpenGraphAudioHost',
+        
+    }],
+    emails: ['OpenGraphEmails'],
+    countryName: 'OpenGraphCountryName',
+    tags: ['OpenGraphTags'],
+    phoneNumbers: ['OpenGraphPhoneNumbers'],
+    locale: 'OpenGraphLocale',
+    expirationTime: '2025-01-28T13:28:27+00:00',
+    section: 'OpenGraphSection',
+    faxNumbers: ['OpenGraphFaxNumbers'],
+    determiner: 'the',
+    alternateLocale: 'OpenGraphAlternateLocale',
+    
+    
+    
     videos: [{
         url: 'OpenGraphVideoURL',
         secureUrl: 'OpenGraphVideoSecureURL',
