@@ -13,6 +13,13 @@ import { Twitter } from 'next/dist/lib/metadata/types/twitter-types';
 
 const inter = Inter({ subsets: ['latin'] });
 
+
+const openGraph: OpenGraph = {
+    title: 'OpenGraphTitle',
+    description: 'OpenGraphDescription',
+    type: 'article',
+    authors: 'OpenGraphAuthors',
+}
 // todo: update metadata
 export const metadata: Metadata = {
     title: 'title',
@@ -36,14 +43,7 @@ export const metadata: Metadata = {
     manifest: 'manifest',
     publisher: 'publisher',
     robots: 'robots',
-    openGraph: {
-        title: 'OpenGraphTitle',
-        description: 'OpenGraphDescription',
-        type: 'website',
-        
-        
-        
-    }
+    openGraph: openGraph,
 };
 
 export default function RootLayout({
