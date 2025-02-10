@@ -53,6 +53,7 @@ export const metadata: Metadata = {
         creator: 'twitterCreator',
         creatorId: 'twitterCreatorId',
         siteId: 'twitterSiteId',
+        images: ["https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg"],
         app: {
             name: 'twitter_app',
             id: {
@@ -65,6 +66,7 @@ export const metadata: Metadata = {
                 ipad: 'https://ipad_url/',
             },
         },
+        
     },
     formatDetection: {
         email: false,
@@ -79,7 +81,10 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
+    <>
+        <meta name="twitter:data1" content="twitter data 1"/>
         <html lang="en">
+            
             <body className={`${inter.className} antialiased h-dvh`}>
                 <ThemeProvider
                     attribute="class"
@@ -97,5 +102,8 @@ export default function RootLayout({
                 </ThemeProvider>
             </body>
         </html>
-    );
+    </>
+    
+)
+    ;
 }
