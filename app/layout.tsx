@@ -46,7 +46,6 @@ export const metadata: Metadata = {
     }
 };
 
-gene
 export default function RootLayout({
     children,
 }: Readonly<{
