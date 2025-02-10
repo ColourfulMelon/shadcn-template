@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     abstract: 'abstract',
     alternates: 'alternates' as AlternateURLs,
     assets: 'assets',
-    authors: 'authors' as Author,
+    authors: [{ name: 'Seb' }, { name: 'Josh', url: 'https://nextjs.org' }],
     archives: 'archives',
     bookmarks: 'bookmarks',
     category: 'category',
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
         description: 'twitterDescription',
         creator: 'twitterCreator',
         creatorId: 'twitterCreatorId',
-    }
+    },
 };
 
 export default function RootLayout({
