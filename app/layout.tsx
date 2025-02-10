@@ -19,6 +19,8 @@ const openGraph: OpenGraph = {
     description: 'OpenGraphDescription',
     type: 'article',
     authors: 'OpenGraphAuthors',
+    siteName: 'OpenGraphSiteName',
+    
 }
 // todo: update metadata
 export const metadata: Metadata = {
