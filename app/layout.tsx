@@ -18,8 +18,22 @@ const openGraph: OpenGraph = {
     title: 'OpenGraphTitle',
     description: 'OpenGraphDescription',
     type: 'article',
+    publishedTime: '2025-01-28T13:28:27+00:00',
+    modifiedTime: '2025-01-28T13:28:27+00:00',
+    videos: [{
+        url: 'OpenGraphVideoURL',
+        secureUrl: 'OpenGraphVideoSecureURL',
+    }],
     authors: 'OpenGraphAuthors',
     siteName: 'OpenGraphSiteName',
+    url: 'OpenGraphURL',
+    images: [{  url: 'https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg', width: 1200, height: 630, alt: 'OpenGraphImageAlt',
+    secureUrl: 'https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg',
+    type: 'image/jpeg'
+    
+    }],
+    
+    
     
 }
 // todo: update metadata
@@ -81,29 +95,34 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-    <>
-        <meta name="twitter:data1" content="twitter data 1"/>
-        <html lang="en">
+        <>
+            <meta name="twitter:label1" content="Written by"/>
+            <meta name="twitter:data1" content="twitter data 1"/>
+            <meta name="twitter:label2" content="Time to read"/>
+            <meta name="twitter:data2" content="1 minute"/>
+            <meta property="og:updated_time" content="2025-01-28T13:28:27+00:00"/>
             
-            <body className={`${inter.className} antialiased h-dvh`}>
-                <ThemeProvider
-                    attribute="class"
-                    defaultTheme="light"
-                    enableSystem
-                    disableTransitionOnChange
-                >
-                    {/*header, page, footer*/}
-                    <div className="h-full grid grid-rows-[auto,1fr,auto] min-h-screen">
-                        <Header/>
-                        {children}
-                        <Footer/>
-                    </div>
-                    <Toaster/>
-                </ThemeProvider>
-            </body>
-        </html>
-    </>
+            <html lang="en">
+                
+                <body className={`${inter.className} antialiased h-dvh`}>
+                    <ThemeProvider
+                        attribute="class"
+                        defaultTheme="light"
+                        enableSystem
+                        disableTransitionOnChange
+                    >
+                        {/*header, page, footer*/}
+                        <div className="h-full grid grid-rows-[auto,1fr,auto] min-h-screen">
+                            <Header/>
+                            {children}
+                            <Footer/>
+                        </div>
+                        <Toaster/>
+                    </ThemeProvider>
+                </body>
+            </html>
+        </>
     
-)
-    ;
+    )
+        ;
 }
