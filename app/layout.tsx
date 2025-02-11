@@ -19,7 +19,7 @@ const openGraph: OpenGraph = {
     description: 'OpenGraphDescription',
     type: 'article',
     siteName: 'OpenGraphSiteName',
-    url: 'https://google.com',
+    url: 'https://aventus.io/',
     authors: ['OpenGraphAuthors'],
     
     // publishedTime: '2025-01-28T13:28:27+00:00',
