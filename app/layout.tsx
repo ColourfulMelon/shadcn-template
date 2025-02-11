@@ -27,10 +27,11 @@ export const metadata: Metadata = {
     description: 'description',
     creator: 'creator',
     openGraph: openGraph,
+    // oembed link workaround
     icons: {
         other: {
             rel: 'alternate',
-            url: './public/oembed.json',
+            url: `${process.env.SITE_URL}/oembed.json`,
             type: 'application/json+oembed',
         }
     }
@@ -48,27 +49,24 @@ export default function RootLayout({
 }>) {
     
     return (
-        <>
-            <html lang="en">
-                {/*<Link type="application/json+oembed" href='/public/oembed.json'/>*/}
-                <body className={`${inter.className} antialiased h-dvh`}>
-                    <ThemeProvider
-                        attribute="class"
-                        defaultTheme="light"
-                        enableSystem
-                        disableTransitionOnChange
-                    >
-                        {/*header, page, footer*/}
-                        <div className="h-full grid grid-rows-[auto,1fr,auto] min-h-screen">
-                            <Header/>
-                            {children}
-                            <Footer/>
-                        </div>
-                        <Toaster/>
-                    </ThemeProvider>
-                </body>
-            </html>
-        </>
+        <html lang="en">
+            <body className={`${inter.className} antialiased h-dvh`}>
+                <ThemeProvider
+                    attribute="class"
+                    defaultTheme="light"
+                    enableSystem
+                    disableTransitionOnChange
+                >
+                    {/*header, page, footer*/}
+                    <div className="h-full grid grid-rows-[auto,1fr,auto] min-h-screen">
+                        <Header/>
+                        {children}
+                        <Footer/>
+                    </div>
+                    <Toaster/>
+                </ThemeProvider>
+            </body>
+        </html>
     
     )
         ;
