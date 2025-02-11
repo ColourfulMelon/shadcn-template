@@ -151,7 +151,7 @@ export default function RootLayout({
                         className="rank-math-schema-pro"
                         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLD) }}
                 />
-            {/*    <title>TItle</title>*/}
+                <title>TItle</title>
             </head>
             <html lang="en">
                 
