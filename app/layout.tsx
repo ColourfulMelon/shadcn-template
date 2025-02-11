@@ -20,7 +20,7 @@ const openGraph: OpenGraph = {
     type: 'article',
     siteName: 'OpenGraphSiteName',
     url: 'https://google.com',
-    
+    authors: ['OpenGraphAuthors'],
     
     // publishedTime: '2025-01-28T13:28:27+00:00',
     // modifiedTime: '2025-01-28T13:28:27+00:00',
