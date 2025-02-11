@@ -120,12 +120,21 @@ export default function RootLayout({
 }>) {
     return (
         <>
-            <meta name="twitter:label1" content="Written by"/>
-            <meta name="twitter:data1" content="twitterdata1"/>
-            <meta name="twitter:label2" content="Time to read"/>
-            <meta name="twitter:data2" content="1 minute"/>
-            <meta name="article:author" content="article Author"/>
-            <meta property="og:updated_time" content="2025-01-28T13:28:27+00:00"/>
+            {/*<meta name="twitter:label1" content="Written by"/>*/}
+            {/*<meta name="twitter:data1" content="twitterdata1"/>*/}
+            {/*<meta name="twitter:label2" content="Time to read"/>*/}
+            {/*<meta name="twitter:data2" content="1 minute"/>*/}
+            {/*<meta name="article:author" content="article Author"/>*/}
+            {/*<meta property="og:updated_time" content="2025-01-28T13:28:27+00:00"/>*/}
+            
+            <meta property="og:title" content="Site Title"/>
+            <meta property="og:type" content="website"/>
+            <meta property="og:url" content="http://my.site.com"/>
+            <meta property="og:image" content="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg"/>
+            <meta property="og:description" content="Site description"/>
+            <meta name="theme-color" content="#FF0000"/>
+            
+            <meta name="twitter:card" content="summary_large_image"/>
             
             <html lang="en">
                 
