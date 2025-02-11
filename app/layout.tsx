@@ -129,23 +129,23 @@ export default function RootLayout({
             {/*<meta name="article:author" content="article Author"/>*/}
             {/*<meta property="og:updated_time" content="2025-01-28T13:28:27+00:00"/>*/}
             
-            <head title="Site Title">
-                <meta property="og:title" content="Site Title"/>
-                <meta property="og:type" content="website"/>
-                <meta property="og:url" content="http://my.site.com"/>
-                <meta property="og:image"
-                      content="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg"/>
-                <meta property="og:description" content="Site description"/>
-                <meta name="theme-color" content="#FF0000"/>
-                
-                <meta name="twitter:card" content="summary_large_image"/>
-                
-                <script type="application/ld+json"
-                        className="rank-math-schema-pro"
-                        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLD) }}
-                />
-                <title>TItle</title>
-            </head>
+            {/*<head title="Site Title">*/}
+            {/*    <meta property="og:title" content="Site Title"/>*/}
+            {/*    <meta property="og:type" content="website"/>*/}
+            {/*    <meta property="og:url" content="http://my.site.com"/>*/}
+            {/*    <meta property="og:image"*/}
+            {/*          content="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg"/>*/}
+            {/*    <meta property="og:description" content="Site description"/>*/}
+            {/*    <meta name="theme-color" content="#FF0000"/>*/}
+            {/*    */}
+            {/*    <meta name="twitter:card" content="summary_large_image"/>*/}
+            {/*    */}
+            {/*    <script type="application/ld+json"*/}
+            {/*            className="rank-math-schema-pro"*/}
+            {/*            dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLD) }}*/}
+            {/*    />*/}
+            {/*    <title>TItle</title>*/}
+            {/*</head>*/}
             <html lang="en">
                 
                 <body className={`${inter.className} antialiased h-dvh`}>
