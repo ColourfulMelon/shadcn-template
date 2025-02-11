@@ -17,3 +17,4 @@ Todo:
 - `Update metadata in layout.tsx`
 - `Change SITE_URL in .env`
 - `Delete form-example if not needed`
+- `Update oembed.json`

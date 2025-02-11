@@ -27,6 +27,13 @@ export const metadata: Metadata = {
     description: 'description',
     creator: 'creator',
     openGraph: openGraph,
+    icons: {
+        other: {
+            rel: 'alternate',
+            url: '/public/oembed.json',
+            type: 'application/json+oembed',
+        }
+    }
 };
 
 export const viewport: Viewport = {
@@ -43,7 +50,7 @@ export default function RootLayout({
     return (
         <>
             <html lang="en">
-                <Link type="application/json+oembed" href='/public/oembed.json'/>
+                {/*<Link type="application/json+oembed" href='/public/oembed.json'/>*/}
                 <body className={`${inter.className} antialiased h-dvh`}>
                     <ThemeProvider
                         attribute="class"
