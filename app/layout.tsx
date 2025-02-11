@@ -11,6 +11,7 @@ import { Author, ReferrerEnum, Verification } from 'next/dist/lib/metadata/types
 import { OpenGraph } from 'next/dist/lib/metadata/types/opengraph-types';
 import { Twitter } from 'next/dist/lib/metadata/types/twitter-types';
 import Link from 'next/link';
+import type { Viewport } from 'next'
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -30,9 +31,11 @@ export const metadata: Metadata = {
     description: 'description',
     creator: 'creator',
     openGraph: openGraph,
-    themeColor: '#00FF00',
 };
 
+export const viewport: Viewport = {
+    themeColor: '#00FF00',
+}
 
 
 export default function RootLayout({
