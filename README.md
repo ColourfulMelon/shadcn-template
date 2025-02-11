@@ -15,4 +15,5 @@ Template with basic packages installed and set up
 Todo:
 - `Update favicon`
 - `Update metadata in layout.tsx`
-- Change SITE_URL in .env
+- `Change SITE_URL in .env`
+- `Delete form-example if not needed`

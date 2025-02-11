@@ -121,7 +121,7 @@ export default function RootLayout({
     return (
         <>
             <meta name="twitter:label1" content="Written by"/>
-            <meta name="twitter:data1" content="twitter data 1"/>
+            <meta name="twitter:data1" content="twitterdata1"/>
             <meta name="twitter:label2" content="Time to read"/>
             <meta name="twitter:data2" content="1 minute"/>
             <meta name="article:author" content="article Author"/>
