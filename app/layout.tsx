@@ -30,6 +30,7 @@ export const metadata: Metadata = {
     description: 'description',
     creator: 'creator',
     openGraph: openGraph,
+    themeColor: '#00FF00',
 };
 
 
