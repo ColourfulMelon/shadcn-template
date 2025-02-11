@@ -63,10 +63,10 @@ const openGraph: OpenGraph = {
 
 // todo: update metadata
 export const metadata: Metadata = {
-    title: 'title',
-    description: 'description',
-    creator: 'creator',
-    authors: [{ name: 'author', url: 'https://google.com' }],
+    // title: 'title',
+    // description: 'description',
+    // creator: 'creator',
+    // authors: [{ name: 'author', url: 'https://google.com' }],
     // applicationName: 'applicationName',
     // abstract: 'abstract',
     // alternates: 'alternates' as AlternateURLs,
@@ -137,7 +137,7 @@ export default function RootLayout({
             {/*<meta name="article:author" content="article Author"/>*/}
             {/*<meta property="og:updated_time" content="2025-01-28T13:28:27+00:00"/>*/}
             
-            <head>
+            {/*<head>*/}
             {/*    <meta property="og:title" content="Site Title"/>*/}
             {/*    <meta property="og:type" content="website"/>*/}
             {/*    <meta property="og:url" content="http://my.site.com"/>*/}
@@ -148,12 +148,12 @@ export default function RootLayout({
             {/*    */}
             {/*    <meta name="twitter:card" content="summary_large_image"/>*/}
             {/*    */}
-                <script type="application/ld+json"
-                        className="rank-math-schema-pro"
-                        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLD) }}
-                />
-                <title>TItle</title>
-            </head>
+            {/*    <script type="application/ld+json"*/}
+            {/*            className="rank-math-schema-pro"*/}
+            {/*            dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLD) }}*/}
+            {/*    />*/}
+            {/*    <title>TItle</title>*/}
+            {/*</head>*/}
             <html lang="en">
                 
                 <body className={`${inter.className} antialiased h-dvh`}>
