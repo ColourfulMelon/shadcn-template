@@ -65,6 +65,7 @@ export const metadata: Metadata = {
     title: 'title',
     description: 'description',
     creator: 'creator',
+    authors: [{ name: 'author', url: 'https://google.com' }],
     // applicationName: 'applicationName',
     // abstract: 'abstract',
     // alternates: 'alternates' as AlternateURLs,
