@@ -20,6 +20,7 @@ const openGraph: OpenGraph = {
     siteName: 'OpenGraphSiteName',
     url: 'https://aventus.io/',
     authors: ['OpenGraphAuthors'],
+    images: ['https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg'],
     
     // publishedTime: '2025-01-28T13:28:27+00:00',
     // modifiedTime: '2025-01-28T13:28:27+00:00',
