@@ -6,10 +6,10 @@ const { SetMetadata } = require('./metadata.ts');
 // Create the oembed data structure
 const oembedData = {
     title: SetMetadata.title,
-    author_name: SetMetadata.siteName,
-    author_url: SetMetadata.url,
-    provider_name: SetMetadata.author,
-    provider_url: SetMetadata.author_url
+    author_name: SetMetadata.author,
+    author_url: SetMetadata.author_url,
+    provider_name: SetMetadata.siteName,
+    provider_url: SetMetadata.url
 };
 
 // Ensure the public directory exists
