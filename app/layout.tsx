@@ -6,26 +6,27 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Toaster } from '@/components/ui/toaster';
 import { OpenGraph } from 'next/dist/lib/metadata/types/opengraph-types';
-import Link from 'next/link';
 import type { Viewport } from 'next'
-
+import { SetMetadata } from '@/metadata';
 const inter = Inter({ subsets: ['latin'] });
 
 
-// todo: update metadata
+/*##################################################################
+ * Do not change metadata below, change it in the metadata.ts file *
+ *#################################################################*/
 const openGraph: OpenGraph = {
-    title: 'OpenGraphTitle',
-    description: 'OpenGraphDescription',
-    type: 'website',
-    siteName: 'OpenGraphSiteName',
-    url: 'https://aventus.io/',
-    images: ['https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg'],
+    title: SetMetadata.title,
+    description: SetMetadata.description,
+    type: SetMetadata.type,
+    siteName: SetMetadata.siteName,
+    url: SetMetadata.url,
+    images: [SetMetadata.image],
 }
 
 export const metadata: Metadata = {
-    title: 'title',
-    description: 'description',
-    creator: 'creator',
+    title: SetMetadata.title,
+    description: SetMetadata.description,
+    creator: SetMetadata.author,
     openGraph: openGraph,
     // oembed link workaround
     icons: {
@@ -33,14 +34,13 @@ export const metadata: Metadata = {
             rel: 'alternate',
             url: `${process.env.SITE_URL}/oembed.json`,
             type: 'application/json+oembed',
-        }
+        },
     }
 };
-// todo: update theme colour
-export const viewport: Viewport = {
-    themeColor: '#00FF00',
-}
 
+export const viewport: Viewport = {
+    themeColor: SetMetadata.themeColor,
+}
 
 export default function RootLayout({
     children,
@@ -67,7 +67,5 @@ export default function RootLayout({
                 </ThemeProvider>
             </body>
         </html>
-    
-    )
-        ;
+    );
 }

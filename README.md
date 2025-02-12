@@ -13,8 +13,7 @@ Template with basic packages installed and set up
 
 [//]: # (User todo list)
 Todo:
-- `Update favicon`
-- `Update metadata in layout.tsx`
-- `Change SITE_URL in .env`
-- `Delete form-example if not needed`
-- `Update oembed.json`
+- [ ] `Update favicon in app folder`
+- [ ] `Update metadata in metadata.ts`
+- [ ] `Change SITE_URL in .env`
+- [ ] `Delete form-example if not needed`
