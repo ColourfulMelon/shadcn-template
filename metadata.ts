@@ -11,5 +11,5 @@ export const SetMetadata = {
     author: 'Dev3.Studio',
     author_url: 'https://dev3.studio',
     themeColor: '#00FF00',
-    image: 'https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg',
+    image: 'https://placehold.co/600x400',
 };
