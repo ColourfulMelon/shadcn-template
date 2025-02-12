@@ -17,7 +17,8 @@ const inter = Inter({ subsets: ['latin'] });
 const openGraph: OpenGraph = {
     title: SetMetadata.title,
     description: SetMetadata.description,
-    type: SetMetadata.type,
+    // workaround as we cant use as const in metadata.ts
+    type: SetMetadata.type as 'website',
     siteName: SetMetadata.siteName,
     url: SetMetadata.url,
     images: [SetMetadata.image],
