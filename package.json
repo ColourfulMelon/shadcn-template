@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "node generate-oembed.js && next build",
+    "build": "ts-node generate-oembed.ts && next build",
     "postbuild": "next-sitemap",
     "start": "next start",
     "lint": "next lint"
