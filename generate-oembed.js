@@ -1,6 +1,7 @@
-import fs from 'fs';
-import path from 'path';
-import { SetMetadata } from './metadata.ts';
+const fs = require('fs');
+const path = require('path');
+
+const { SetMetadata } = require('./metadata.ts');
 
 // Create the oembed data structure
 const oembedData = {
@@ -25,4 +26,4 @@ fs.writeFileSync(
     'utf8'
 );
 
-console.log(`oembed.json has been created successfully at ${oembedPath}`);
+console.log(`oembed.json has been created at ${oembedPath}`);
