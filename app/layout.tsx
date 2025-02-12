@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     icons: {
         other: {
             rel: 'alternate',
-            url: `${process.env.SITE_URL}/oembed.json`,
+            url: `#/oembed.json`,
             type: 'application/json+oembed',
         }
     }
