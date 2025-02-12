@@ -36,7 +36,7 @@ export const metadata: Metadata = {
         }
     }
 };
-
+// todo: update theme colour
 export const viewport: Viewport = {
     themeColor: '#00FF00',
 }
