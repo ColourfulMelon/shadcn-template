@@ -7,7 +7,7 @@ export const SetMetadata = {
     description: 'Description',
     type: 'website',
     siteName: 'SiteName',
-    url: process.env.SITE_URL,
+    url: process.env.NEXTAUTH_URL,
     author: 'Dev3.Studio',
     author_url: 'https://dev3.studio',
     themeColor: '#00FF00',
