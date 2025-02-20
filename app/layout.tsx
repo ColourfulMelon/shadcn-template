@@ -4,7 +4,7 @@ import './globals.css';
 import { ThemeProvider } from '@/components/theme-provider';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { Toaster } from '@/components/ui/toaster';
+import { Toaster } from "@/components/ui/sonner";
 import { OpenGraph } from 'next/dist/lib/metadata/types/opengraph-types';
 import type { Viewport } from 'next'
 import { SetMetadata } from '@/metadata';
