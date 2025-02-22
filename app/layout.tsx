@@ -8,6 +8,7 @@ import { Toaster } from "@/components/ui/sonner";
 import { OpenGraph } from 'next/dist/lib/metadata/types/opengraph-types';
 import type { Viewport } from 'next'
 import { SetMetadata } from '@/metadata';
+import { ColorSchemeEnum } from 'next/dist/lib/metadata/types/metadata-types';
 const inter = Inter({ subsets: ['latin'] });
 
 
@@ -41,6 +42,7 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
     themeColor: SetMetadata.themeColor,
+    colorScheme: SetMetadata.colorScheme as ColorSchemeEnum,
 }
 
 export default function RootLayout({
