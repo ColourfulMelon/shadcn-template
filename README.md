@@ -1,5 +1,5 @@
 ### Shadcn-Tailwind-Next.js 
-Template with basic packages installed and set up
+Template with basic packages installed and set up. Support for all required metadata fields for Twitter, Discord, and Telegram
 
 [//]: # (list of packages)
 - [x] `Jotai for state management`
