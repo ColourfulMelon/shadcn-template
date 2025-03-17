@@ -1,7 +1,69 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
 
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --padding-safe-b: env(safe-area-inset-bottom);
+  --padding-safe-t: env(safe-area-inset-top);
+  --padding-safe-l: env(safe-area-inset-left);
+  --padding-safe-r: env(safe-area-inset-right);
+
+  --color-background: hsla(var(--background));
+  --color-foreground: hsla(var(--foreground));
+
+  --color-card: hsla(var(--card));
+  --color-card-foreground: hsla(var(--card-foreground));
+
+  --color-popover: hsla(var(--popover));
+  --color-popover-foreground: hsla(var(--popover-foreground));
+
+  --color-primary: hsla(var(--primary));
+  --color-primary-foreground: hsla(var(--primary-foreground));
+
+  --color-secondary: hsla(var(--secondary));
+  --color-secondary-foreground: hsla(var(--secondary-foreground));
+
+  --color-muted: hsla(var(--muted));
+  --color-muted-foreground: hsla(var(--muted-foreground));
+
+  --color-accent: hsla(var(--accent));
+  --color-accent-foreground: hsla(var(--accent-foreground));
+
+  --color-destructive: hsla(var(--destructive));
+  --color-destructive-foreground: hsla(var(--destructive-foreground));
+
+  --color-border: hsla(var(--border));
+  --color-input: hsla(var(--input));
+  --color-ring: hsla(var(--ring));
+
+  --color-chart-1: hsla(var(--chart-1));
+  --color-chart-2: hsla(var(--chart-2));
+  --color-chart-3: hsla(var(--chart-3));
+  --color-chart-4: hsla(var(--chart-4));
+  --color-chart-5: hsla(var(--chart-5));
+
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+}
+
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+}
 
 @layer base {
     :root {
@@ -74,7 +136,6 @@
 
 /*remove image dragging*/
 img {
-    user-drag: none;
     user-select: none;
     -moz-user-select: none;
     -webkit-user-drag: none;
@@ -84,7 +145,6 @@ img {
 
 /*remove link dragging*/
 a {
-    user-drag: none;
     user-select: none;
     -moz-user-select: none;
     -webkit-user-drag: none;
