@@ -61,7 +61,7 @@ export default function RootLayout({
                     disableTransitionOnChange
                 >
                     {/*header, page, footer*/}
-                    <div className="h-full grid grid-rows-[auto,1fr,auto] min-h-screen">
+                    <div className="h-full grid grid-rows-[auto_1fr_auto] min-h-screen">
                         <Header/>
                         {children}
                         <Footer/>
