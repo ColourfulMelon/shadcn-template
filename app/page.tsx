@@ -19,8 +19,8 @@ export default function Home() {
                     
                     <div className="pl-m border-l-2 border-primary/20 my-m">
                         <p className="text-l italic">
-                            "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
-                            posuere cubilia curae; Sed at massa vel nunc commodo."
+                            &quot;Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+                            posuere cubilia curae; Sed at massa vel nunc commodo.&quot;
                         </p>
                     </div>
                 </section>
