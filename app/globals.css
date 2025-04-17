@@ -45,6 +45,28 @@
   --radius-lg: var(--radius);
   --radius-md: calc(var(--radius) - 2px);
   --radius-sm: calc(var(--radius) - 4px);
+
+
+  --text-xs: clamp(0.5556rem, 0.7254rem + -0.1415vw, 0.6944rem);
+  --text-s: clamp(0.8333rem, 0.8333rem + 0vw, 0.8333rem);
+  --text-m: clamp(1rem, 0.9443rem + 0.2548vw, 1.25rem);
+  --text-l: clamp(1.2rem, 1.0495rem + 0.6879vw, 1.875rem);
+  --text-xl: clamp(1.44rem, 1.134rem + 1.3987vw, 2.8125rem);
+  --text-2xl: clamp(1.728rem, 1.1727rem + 2.5383vw, 4.2188rem);
+  --text-3xl: clamp(2.0736rem, 1.1251rem + 4.3358vw, 6.3281rem);
+  --text-4xl: clamp(2.4883rem, 0.9269rem + 7.1377vw, 9.4922rem);
+
+
+
+  --spacing-3xs: clamp(0.25rem, 0.2361rem + 0.0637vw, 0.3125rem);
+    --spacing-2xs: clamp(0.5rem, 0.4721rem + 0.1274vw, 0.625rem);
+    --spacing-xs: clamp(0.75rem, 0.7082rem + 0.1911vw, 0.9375rem);
+  --spacing-s: clamp(1rem, 0.9443rem + 0.2548vw, 1.25rem);
+  --spacing-m: clamp(1.5rem, 1.4164rem + 0.3822vw, 1.875rem);
+  --spacing-l: clamp(2rem, 1.8885rem + 0.5096vw, 2.5rem);
+  --spacing-xl: clamp(3rem, 2.8328rem + 0.7643vw, 3.75rem);
+  --spacing-2xl: clamp(4rem, 3.7771rem + 1.0191vw, 5rem);
+  --spacing-3xl: clamp(6rem, 5.6656rem + 1.5287vw, 7.5rem);
 }
 
 /*

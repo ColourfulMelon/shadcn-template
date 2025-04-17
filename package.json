@@ -39,6 +39,7 @@
     "next-sitemap": "^4.2.3",
     "postcss": "^8",
     "sonner": "^2.0.0",
+    "tailwind-utopia": "github:cwsdigital/tailwind-utopia",
     "tailwindcss": "^4.0.8",
     "typescript": "^5"
   },
