@@ -6,12 +6,12 @@ export default function Footer(){
             
             <a
                 className="self-center text-xs text-muted-foreground flex items-center gap-1"
-                href="https://teleswap.gitbook.io/teleswap-docs/"
+                href="https://dev3.studio/"
             >
                 Made with ❤️ by{' '}
                 <Image
                     src={'https://cdn.dev3.studio/logo.svg'}
-                    alt={'Teleswap'}
+                    alt={'Dev3 Studio Logo'}
                     className="h-2 w-auto"
                     width={300}
                     height={62}
