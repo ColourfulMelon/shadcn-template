@@ -5,4 +5,4 @@ const serverEnvSchema = z.object({
 //     todo populate with server environment variables
 });
 
-export const env = serverEnvSchema.parse(process.env);
+export const serverEnv = serverEnvSchema.parse(process.env);
