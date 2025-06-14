@@ -5,5 +5,5 @@ const clientEnvSchema = z.object({
 });
 
 // Manually pass environment variables due to how Next.js injects them
-export const env = clientEnvSchema.parse({
+export const clientEnv = clientEnvSchema.parse({
 });
