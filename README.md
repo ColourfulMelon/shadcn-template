@@ -15,5 +15,6 @@ Template with basic packages installed and set up. Support for all required meta
 Todo:
 - [ ] `Update favicon in app folder`
 - [ ] `Update metadata in metadata.ts`
+- [ ] `Populate client-env and server-env with relevant enviroment variables`
 - [ ] `Change SITE_URL in .env`
 - [ ] `Delete form-example if not needed`
