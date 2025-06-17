@@ -52,7 +52,7 @@ export default function RootLayout({
 }>) {
     
     return (
-        <html lang="en">
+        <html suppressHydrationWarning lang="en">
             <body className={`${inter.className} antialiased h-dvh`}>
                 <ThemeProvider
                     attribute="class"
