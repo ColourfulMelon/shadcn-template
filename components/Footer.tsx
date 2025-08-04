@@ -1,7 +1,7 @@
 import Image from 'next/image';
 export default function Footer(){
     return(
-        <footer className="bg-primary text-white p-4">
+        <footer className="bg-primary p-4">
             <p>Footer</p>
             
             <a
