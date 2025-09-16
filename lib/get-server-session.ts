@@ -4,7 +4,7 @@ import type { Session } from '@/lib/client.ts';
 import { clientEnv } from '@/lib/client-env.ts';
 export async function getServerSession() {
     const cookieStore = await cookies();
-    const authRes = await fetch(`${clientEnv.NEXT_PUBLIC_SITE_URL}/api/auth/get-session`, {
+    const authRes = await fetch(`${clientEnv.SITE_URL}/api/auth/get-session`, {
         headers: {
             Cookie: cookieStore.toString()
         },

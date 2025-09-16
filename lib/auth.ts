@@ -25,7 +25,6 @@ export const auth = betterAuth({
                 sessions: Sessions,
                 verifications: Verifications,
             },
-            // usePlural: true,
         }
     ),
     plugins: [
@@ -36,7 +35,6 @@ export const auth = betterAuth({
     session: { modelName: 'sessions' },
     account: { modelName: 'accounts' },
     verification: { modelName: 'verifications' },
-    
 });
 
 

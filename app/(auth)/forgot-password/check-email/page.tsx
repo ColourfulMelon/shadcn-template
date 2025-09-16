@@ -10,7 +10,7 @@ import { cn } from '@/lib/utils';
 export default function ForgotPasswordEmail() {
     const searchParams = useSearchParams();
     const emailParam = searchParams.get('email');
-    const parsedEmailParam = z.string().email().safeParse(emailParam);
+    const parsedEmailParam = z.email().safeParse(emailParam);
     const email = parsedEmailParam.success ? parsedEmailParam.data : null;
     const [resendDisabled, setResendDisabled] = useState<boolean>(false);
     
