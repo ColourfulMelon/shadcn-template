@@ -1,7 +1,6 @@
-"use client";
 import { ThemeProvider } from 'next-themes';
 import { Toaster } from '@/components/ui/sonner.tsx';
-import ContextProvider from '.';
+import ContextProvider from './reown.tsx';
 import { headers } from 'next/headers';
 
 export const Providers = async ({children}: {children: React.ReactNode}) => {

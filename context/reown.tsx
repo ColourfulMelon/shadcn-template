@@ -1,15 +1,26 @@
 'use client'
 
-import { wagmiAdapter, networks } from '@/config'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { createAppKit } from '@reown/appkit/react'
 import React, { type ReactNode } from 'react'
 import { cookieToInitialState, WagmiProvider, type Config } from 'wagmi'
 import { clientEnv } from '@/lib/client-env.ts';
 import { SetMetadata } from '@/metadata.ts';
+import { type AppKitNetwork, mainnet, sepolia } from '@reown/appkit/networks';
+import { WagmiAdapter } from '@reown/appkit-adapter-wagmi';
 
 // Set up queryClient
 const queryClient = new QueryClient()
+
+//todo config networks
+export const networks = [mainnet, sepolia] as [AppKitNetwork, ...AppKitNetwork[]]
+
+//Set up the Wagmi Adapter (Config)
+export const wagmiAdapter = new WagmiAdapter({
+  ssr: true,
+  projectId: clientEnv.REOWN_PROJECT_ID,
+  networks
+})
 
 // Set up metadata
 const metadata = {
