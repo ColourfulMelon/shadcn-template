@@ -1,0 +1,10 @@
+{
+  "name": "shadcn-kit",
+  "description": "Component-authoring helpers for this shadcn/ui + Tailwind v4 template.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Dev3.Studio",
+    "url": "https://dev3.studio"
+  },
+  "keywords": ["shadcn", "tailwind", "nextjs", "react", "components"]
+}

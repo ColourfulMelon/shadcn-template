@@ -1,0 +1,19 @@
+{
+  "name": "shadcn-template-kit",
+  "owner": {
+    "name": "Dev3.Studio",
+    "url": "https://dev3.studio"
+  },
+  "metadata": {
+    "description": "Local Claude Code plugins that ship with this shadcn/ui + Next.js template.",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "shadcn-kit",
+      "source": "./plugins/shadcn-kit",
+      "description": "Component-authoring helpers for this shadcn/ui + Tailwind v4 template.",
+      "version": "0.1.0"
+    }
+  ]
+}

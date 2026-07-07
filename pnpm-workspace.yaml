@@ -1,0 +1,9 @@
+# pnpm reads project settings from here (pnpm >= 10.16), not the package.json "pnpm" field.
+# Approve sharp's native install/build script — it powers Next.js image optimization and
+# the build-time oEmbed thumbnail sizing. Without approval, pnpm 11 fails installs with
+# ERR_PNPM_IGNORED_BUILDS. pnpm 11 uses `allowBuilds`; pnpm 10 (CI) uses
+# `onlyBuiltDependencies`, so both are declared for cross-version compatibility.
+allowBuilds:
+  sharp: true
+onlyBuiltDependencies:
+  - sharp

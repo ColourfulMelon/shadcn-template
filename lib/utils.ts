@@ -100,7 +100,7 @@ export async function exponentialRetry<T>(
   
   const calculateDelay = (attempt: number): number => {
     // Calculate exponential delay: baseDelay * 2^attempt
-    const exponentialDelay = baseDelay * Math.pow(2, attempt - 1);
+    const exponentialDelay = baseDelay * 2 ** (attempt - 1);
     
     // Add some random jitter (±100ms) to prevent thundering herd
     const jitter = Math.random() * 200 - 100;

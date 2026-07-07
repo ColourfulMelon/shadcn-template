@@ -8,7 +8,7 @@ export default function catchError<T, E extends new (message?: string) => Error>
         })
         .catch((error) => {
             // catch all if no errorsToCatch are provided
-            if (errorsToCatch == undefined) {
+            if (errorsToCatch == null) {
                 return [error];
             }
 
