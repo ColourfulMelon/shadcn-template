@@ -5,37 +5,42 @@ import { ThemeProvider } from '@/components/theme-provider';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Toaster } from "@/components/ui/sonner";
-import { OpenGraph } from 'next/dist/lib/metadata/types/opengraph-types';
 import type { Viewport } from 'next'
 import { SetMetadata } from '@/metadata';
-import { ColorSchemeEnum } from 'next/dist/lib/metadata/types/metadata-types';
 const inter = Inter({ subsets: ['latin'] });
 
 
 /*##################################################################
  * Do not change metadata below, change it in the metadata.ts file *
  *#################################################################*/
-const openGraph: OpenGraph = {
-    title: SetMetadata.title,
-    description: SetMetadata.description,
-    // workaround as we cant use as const in metadata.ts
-    type: SetMetadata.type as 'website',
-    siteName: SetMetadata.siteName,
-    url: SetMetadata.url,
-    images: [SetMetadata.image],
-}
-
 export const metadata: Metadata = {
     metadataBase: new URL(SetMetadata.url),
-    title: SetMetadata.title,
+    title: {
+        default: SetMetadata.title,
+        template: `%s | ${SetMetadata.siteName}`,
+    },
     description: SetMetadata.description,
+    applicationName: SetMetadata.siteName,
     creator: SetMetadata.author,
-    openGraph: openGraph,
+    authors: [{ name: SetMetadata.author, url: SetMetadata.authorUrl }],
+    openGraph: {
+        title: SetMetadata.title,
+        description: SetMetadata.description,
+        type: SetMetadata.type,
+        siteName: SetMetadata.siteName,
+        url: SetMetadata.url,
+        locale: SetMetadata.locale,
+        images: [SetMetadata.image],
+    },
     twitter: {
         card: 'summary_large_image',
         title: SetMetadata.title,
         description: SetMetadata.description,
         images: [SetMetadata.image],
+        ...(SetMetadata.twitterHandle && {
+            site: SetMetadata.twitterHandle,
+            creator: SetMetadata.twitterHandle,
+        }),
     },
     // oembed link workaround
     icons: {
@@ -49,7 +54,7 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
     themeColor: SetMetadata.themeColor,
-    colorScheme: SetMetadata.colorScheme as ColorSchemeEnum,
+    colorScheme: SetMetadata.colorScheme,
 }
 
 export default function RootLayout({
@@ -59,7 +64,7 @@ export default function RootLayout({
 }>) {
     
     return (
-        <html suppressHydrationWarning lang="en">
+        <html suppressHydrationWarning lang={SetMetadata.lang}>
             <body className={`${inter.className} antialiased h-dvh`}>
                 <ThemeProvider
                     attribute="class"
