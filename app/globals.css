@@ -1,6 +1,8 @@
 @import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'tailwind-scrollbar-hide/v4';
 
-@custom-variant dark (&:is(.dark *);
+@custom-variant dark (&:is(.dark *));
 
 @theme {
   --padding-safe-b: env(safe-area-inset-bottom);

@@ -5,7 +5,7 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
 
-interface FibbonaciRetryOptions {
+interface FibonacciRetryOptions {
   maxAttempts?: number;
   onRetry?: (attempt: number, delay: number, error: Error) => void;
 }
@@ -24,7 +24,7 @@ interface RateLimitError extends Error {
  */
 export async function fibonacciRetry<T>(
     fn: () => Promise<T>,
-    options: FibbonaciRetryOptions = {}
+    options: FibonacciRetryOptions = {}
 ): Promise<T> {
   const {
     maxAttempts = 5,
@@ -33,8 +33,12 @@ export async function fibonacciRetry<T>(
   } = options;
   
   const fibonacci = (n: number): number => {
-    if (n <= 1) return n;
-    return fibonacci(n - 1) + fibonacci(n - 2);
+    let previous = 0;
+    let current = 1;
+    for (let i = 0; i < n; i++) {
+      [previous, current] = [current, previous + current];
+    }
+    return previous;
   };
   
   let attempt = 0;

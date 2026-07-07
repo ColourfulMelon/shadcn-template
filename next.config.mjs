@@ -1,7 +1,21 @@
+const siteUrl =
+    process.env.SITE_URL
+    ?? (process.env.VERCEL_PROJECT_PRODUCTION_URL
+        ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+        : 'http://localhost:3000');
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     env: {
-        NEXT_PUBLIC_VERCEL_URL: process.env.VERCEL_URL,
+        NEXT_PUBLIC_SITE_URL: siteUrl,
+    },
+    images: {
+        remotePatterns: [
+            {
+                protocol: 'https',
+                hostname: 'cdn.dev3.studio',
+            },
+        ],
     },
     webpack(config) {
         // Grab the existing rule that handles SVG imports

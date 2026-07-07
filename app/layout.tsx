@@ -26,15 +26,22 @@ const openGraph: OpenGraph = {
 }
 
 export const metadata: Metadata = {
+    metadataBase: new URL(SetMetadata.url),
     title: SetMetadata.title,
     description: SetMetadata.description,
     creator: SetMetadata.author,
     openGraph: openGraph,
+    twitter: {
+        card: 'summary_large_image',
+        title: SetMetadata.title,
+        description: SetMetadata.description,
+        images: [SetMetadata.image],
+    },
     // oembed link workaround
     icons: {
         other: {
             rel: 'alternate',
-            url: `${process.env.SITE_URL}/oembed.json`,
+            url: `${SetMetadata.url}/oembed.json`,
             type: 'application/json+oembed',
         },
     }
