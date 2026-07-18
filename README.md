@@ -43,6 +43,9 @@ The canonical site URL is resolved in this order:
 2. `https://$VERCEL_PROJECT_PRODUCTION_URL` (set automatically on Vercel)
 3. `http://localhost:3000`
 
+Production builds fail when the URL still points to localhost or the default title,
+description, site name, share image, or image alt text has not been replaced.
+
 It is exposed to the browser as `NEXT_PUBLIC_SITE_URL` via `lib/client-env.ts`.
 
 ## After cloning — to do

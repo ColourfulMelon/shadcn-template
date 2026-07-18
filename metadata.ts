@@ -1,6 +1,5 @@
-import dotenv from "dotenv";
-
-dotenv.config();
+import type { Viewport } from "next";
+import { resolveSiteUrl } from "./site-url.mts";
 
 type OpenGraphType =
   | "website"
@@ -15,8 +14,6 @@ type OpenGraphType =
   | "video.episode"
   | "video.tv_show"
   | "video.other";
-
-type ColorScheme = "normal" | "light" | "dark" | "light dark" | "dark light" | "only light";
 
 interface SiteMetadata {
   /** Default page title, also used for og:title and twitter:title */
@@ -35,7 +32,7 @@ interface SiteMetadata {
   authorUrl: string;
   /** X/Twitter handle including the '@' (twitter:site / twitter:creator); leave empty to omit */
   twitterHandle: string;
-  themeColor: string;
+  themeColor: NonNullable<Viewport["themeColor"]>;
   /** Social share image; 1200x630 is the recommended size */
   image: {
     url: string;
@@ -43,16 +40,8 @@ interface SiteMetadata {
     height: number;
     alt: string;
   };
-  colorScheme: ColorScheme;
+  colorScheme: NonNullable<Viewport["colorScheme"]>;
 }
-
-// Canonical site URL: explicit SITE_URL wins, then the Vercel production
-// domain, then localhost for local development.
-export const siteUrl =
-  process.env.SITE_URL ??
-  (process.env.VERCEL_PROJECT_PRODUCTION_URL
-    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
-    : "http://localhost:3000");
 
 // todo: update metadata
 export const siteMetadata = {
@@ -60,18 +49,40 @@ export const siteMetadata = {
   description: "Description",
   type: "website",
   siteName: "SiteName",
-  url: siteUrl,
+  url: resolveSiteUrl(),
   lang: "en",
   locale: "en_US",
   author: "Dev3.Studio",
   authorUrl: "https://dev3.studio",
   twitterHandle: "",
-  themeColor: "#00FF00",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+    { media: "(prefers-color-scheme: dark)", color: "#0a0a0a" },
+  ],
   image: {
     url: "https://placehold.co/1200x630",
     width: 1200,
     height: 630,
     alt: "Title",
   },
-  colorScheme: "dark",
+  colorScheme: "light dark",
 } satisfies SiteMetadata;
+
+if (process.env.NODE_ENV === "production") {
+  const siteUrl = new URL(siteMetadata.url);
+  const imageUrl = new URL(siteMetadata.image.url, `${siteMetadata.url}/`);
+  const placeholderFields = [
+    siteMetadata.title === "Title" ? "title" : null,
+    siteMetadata.description === "Description" ? "description" : null,
+    siteMetadata.siteName === "SiteName" ? "siteName" : null,
+    ["localhost", "127.0.0.1", "[::1]"].includes(siteUrl.hostname) ? "url" : null,
+    imageUrl.hostname === "placehold.co" ? "image.url" : null,
+    siteMetadata.image.alt === "Title" ? "image.alt" : null,
+  ].filter((field): field is string => field !== null);
+
+  if (placeholderFields.length > 0) {
+    throw new Error(
+      `Production metadata is not configured: ${placeholderFields.join(", ")}. Update metadata.ts and SITE_URL before building.`,
+    );
+  }
+}
