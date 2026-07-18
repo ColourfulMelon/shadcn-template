@@ -11,7 +11,7 @@ after each step, show the diff and confirm before moving on. Ask for any value y
 don't have (site name, URL, author, social handle, brand color) instead of guessing.
 
 ## 1. Site metadata — `metadata.ts`
-`export const SetMetadata` (typed by the `SiteMetadata` interface) drives Open Graph,
+`export const siteMetadata` (typed by the `SiteMetadata` interface) drives Open Graph,
 Twitter cards, the oEmbed JSON, `<html lang>`, and theme color. Replace the placeholder
 values:
 - `title`, `description`, `siteName`

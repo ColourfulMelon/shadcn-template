@@ -55,7 +55,7 @@ export const siteUrl =
     : "http://localhost:3000");
 
 // todo: update metadata
-export const SetMetadata = {
+export const siteMetadata = {
   title: "Title",
   description: "Description",
   type: "website",

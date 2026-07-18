@@ -8,7 +8,7 @@ Template with basic packages installed and set up. Supports all required metadat
 - [x] Jotai for state management
 - [x] Zod for validation, with typed `client-env` / `server-env` helpers
 - [x] Native Next.js sitemap and robots metadata routes
-- [x] oEmbed JSON generated at build time from `metadata.ts`
+- [x] Native oEmbed JSON route sourced from `metadata.ts`
 - [x] Lucide React icons
 - [x] SVGR — import SVGs as React components (append `?url` for a plain URL)
 - [x] next-themes dark mode (`ThemeProvider` + `dark` variant)

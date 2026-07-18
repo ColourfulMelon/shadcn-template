@@ -7,7 +7,7 @@
   },
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "node generate-oembed.js && next build",
+    "build": "next build",
     "start": "next start",
     "lint": "biome lint .",
     "format": "biome format --write .",

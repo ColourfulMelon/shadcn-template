@@ -6,55 +6,55 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
-import { SetMetadata } from "@/metadata";
+import { siteMetadata } from "@/metadata";
 
 const inter = Inter({ subsets: ["latin"] });
+const oEmbedUrl = new URL("/oembed.json", siteMetadata.url);
+oEmbedUrl.searchParams.set("url", siteMetadata.url);
 
 /*##################################################################
  * Do not change metadata below, change it in the metadata.ts file *
  *#################################################################*/
 export const metadata: Metadata = {
-  metadataBase: new URL(SetMetadata.url),
+  metadataBase: new URL(siteMetadata.url),
   title: {
-    default: SetMetadata.title,
-    template: `%s | ${SetMetadata.siteName}`,
+    default: siteMetadata.title,
+    template: `%s | ${siteMetadata.siteName}`,
   },
-  description: SetMetadata.description,
-  applicationName: SetMetadata.siteName,
-  creator: SetMetadata.author,
-  authors: [{ name: SetMetadata.author, url: SetMetadata.authorUrl }],
+  description: siteMetadata.description,
+  applicationName: siteMetadata.siteName,
+  creator: siteMetadata.author,
+  authors: [{ name: siteMetadata.author, url: siteMetadata.authorUrl }],
+  alternates: {
+    canonical: siteMetadata.url,
+    types: {
+      "application/json+oembed": oEmbedUrl,
+    },
+  },
   openGraph: {
-    title: SetMetadata.title,
-    description: SetMetadata.description,
-    type: SetMetadata.type,
-    siteName: SetMetadata.siteName,
-    url: SetMetadata.url,
-    locale: SetMetadata.locale,
-    images: [SetMetadata.image],
+    title: siteMetadata.title,
+    description: siteMetadata.description,
+    type: siteMetadata.type,
+    siteName: siteMetadata.siteName,
+    url: siteMetadata.url,
+    locale: siteMetadata.locale,
+    images: [siteMetadata.image],
   },
   twitter: {
     card: "summary_large_image",
-    title: SetMetadata.title,
-    description: SetMetadata.description,
-    images: [SetMetadata.image],
-    ...(SetMetadata.twitterHandle && {
-      site: SetMetadata.twitterHandle,
-      creator: SetMetadata.twitterHandle,
+    title: siteMetadata.title,
+    description: siteMetadata.description,
+    images: [siteMetadata.image],
+    ...(siteMetadata.twitterHandle && {
+      site: siteMetadata.twitterHandle,
+      creator: siteMetadata.twitterHandle,
     }),
-  },
-  // oembed link workaround
-  icons: {
-    other: {
-      rel: "alternate",
-      url: `${SetMetadata.url}/oembed.json`,
-      type: "application/json+oembed",
-    },
   },
 };
 
 export const viewport: Viewport = {
-  themeColor: SetMetadata.themeColor,
-  colorScheme: SetMetadata.colorScheme,
+  themeColor: siteMetadata.themeColor,
+  colorScheme: siteMetadata.colorScheme,
 };
 
 export default function RootLayout({
@@ -63,7 +63,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html suppressHydrationWarning lang={SetMetadata.lang}>
+    <html suppressHydrationWarning lang={siteMetadata.lang}>
       <body className={`${inter.className} antialiased h-dvh`}>
         <ThemeProvider
           attribute="class"
