@@ -23,8 +23,8 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Lint
-        run: pnpm lint
+      - name: Code quality
+        run: pnpm check:ci
 
       - name: Typecheck
         run: pnpm typecheck

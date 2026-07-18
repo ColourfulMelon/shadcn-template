@@ -1,0 +1,16 @@
+#!/bin/sh
+# Block commits that contain staged formatting, lint, or import-order violations.
+# Enabled via `core.hooksPath=.githooks`, set by the "prepare" script on `pnpm install`.
+
+root="$(git rev-parse --show-toplevel)"
+biome="$root/node_modules/.bin/biome"
+
+if [ ! -x "$biome" ]; then
+  echo "pre-commit: Biome is not installed. Run 'pnpm install' before committing."
+  exit 1
+fi
+
+cd "$root" || exit 1
+
+echo "▶ Checking staged files with Biome…"
+exec "$biome" check --staged

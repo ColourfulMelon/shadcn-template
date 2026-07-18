@@ -24,7 +24,16 @@ cp .env.example .env
 pnpm dev
 ```
 
-Other scripts: `pnpm lint`, `pnpm typecheck`, `pnpm build` (also generates `oembed.json`, sitemap, and robots.txt).
+## Quality checks
+
+```bash
+pnpm check       # formatting, lint rules, and import ordering
+pnpm typecheck   # TypeScript
+pnpm build       # production build, oEmbed, sitemap, and robots.txt
+```
+
+CI runs all three checks. The installed pre-commit hook runs the full Biome check against
+staged files; use `pnpm check:fix` to apply safe formatting and import fixes.
 
 ## Site URL
 
