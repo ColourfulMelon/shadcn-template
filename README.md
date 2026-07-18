@@ -5,7 +5,6 @@ Template with basic packages installed and set up. Supports all required metadat
 ## What's included
 
 - [x] [shadcn/ui](https://ui.shadcn.com) set up for Tailwind CSS v4 (Button and Sonner toaster installed)
-- [x] Jotai for state management
 - [x] Zod for validation, with typed `client-env` / `server-env` helpers
 - [x] Native Next.js sitemap and robots metadata routes
 - [x] Native oEmbed JSON route sourced from `metadata.ts`
@@ -17,6 +16,8 @@ Template with basic packages installed and set up. Supports all required metadat
 - [x] `use-media-query` hook
 
 ## Getting started
+
+Requires Node.js 24.
 
 ```bash
 pnpm install
