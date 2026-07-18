@@ -7,7 +7,7 @@ Template with basic packages installed and set up. Supports all required metadat
 - [x] [shadcn/ui](https://ui.shadcn.com) set up for Tailwind CSS v4 (Button and Sonner toaster installed)
 - [x] Jotai for state management
 - [x] Zod for validation, with typed `client-env` / `server-env` helpers
-- [x] next-sitemap for automatic sitemap + robots.txt generation
+- [x] Native Next.js sitemap and robots metadata routes
 - [x] oEmbed JSON generated at build time from `metadata.ts`
 - [x] Lucide React icons
 - [x] SVGR — import SVGs as React components (append `?url` for a plain URL)

@@ -8,7 +8,6 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "node generate-oembed.js && next build",
-    "postbuild": "next-sitemap",
     "start": "next start",
     "lint": "biome lint .",
     "format": "biome format --write .",
@@ -41,7 +40,6 @@
     "@types/node": "^22.20.1",
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",
-    "next-sitemap": "^4.2.3",
     "postcss": "^8.5.16",
     "tailwind-scrollbar-hide": "^4.0.0",
     "tailwindcss": "^4.3.2",
