@@ -5,10 +5,10 @@ Template with basic packages installed and set up. Supports all required metadat
 ## What's included
 
 - [x] [shadcn/ui](https://ui.shadcn.com) set up for Tailwind CSS v4 (Button and Sonner toaster installed)
-- [x] Jotai for state management
 - [x] Zod for validation, with typed `client-env` / `server-env` helpers
-- [x] next-sitemap for automatic sitemap + robots.txt generation
-- [x] oEmbed JSON generated at build time from `metadata.ts`
+- [x] Native Next.js sitemap and robots metadata routes
+- [x] Native oEmbed JSON route sourced from `metadata.ts`
+- [x] Baseline security headers with a [documented CSP starting point](docs/security.md)
 - [x] Lucide React icons
 - [x] SVGR — import SVGs as React components (append `?url` for a plain URL)
 - [x] next-themes dark mode (`ThemeProvider` + `dark` variant)
@@ -17,6 +17,8 @@ Template with basic packages installed and set up. Supports all required metadat
 - [x] `use-media-query` hook
 
 ## Getting started
+
+Requires Node.js 24.
 
 ```bash
 pnpm install
@@ -42,6 +44,11 @@ The canonical site URL is resolved in this order:
 1. `SITE_URL` from the environment / `.env`
 2. `https://$VERCEL_PROJECT_PRODUCTION_URL` (set automatically on Vercel)
 3. `http://localhost:3000`
+
+Production builds fail when the URL still points to localhost or the default title,
+description, site name, share image, or image alt text has not been replaced.
+Repository CI uses `ALLOW_PLACEHOLDER_METADATA=true` for the unconfigured template;
+never set this bypass in a deployed environment.
 
 It is exposed to the browser as `NEXT_PUBLIC_SITE_URL` via `lib/client-env.ts`.
 

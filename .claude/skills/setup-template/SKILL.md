@@ -11,17 +11,17 @@ after each step, show the diff and confirm before moving on. Ask for any value y
 don't have (site name, URL, author, social handle, brand color) instead of guessing.
 
 ## 1. Site metadata — `metadata.ts`
-`export const SetMetadata` (typed by the `SiteMetadata` interface) drives Open Graph,
+`export const siteMetadata` (typed by the `SiteMetadata` interface) drives Open Graph,
 Twitter cards, the oEmbed JSON, `<html lang>`, and theme color. Replace the placeholder
 values:
 - `title`, `description`, `siteName`
 - `author`, `authorUrl`
 - `twitterHandle` (include the `@`, or leave `''` to omit twitter:site/creator)
-- `themeColor` (currently the `#00FF00` placeholder)
+- `themeColor` light/dark values if they no longer match the site's background colors
 - `image` — the 1200×630 social share image (`url`, `width`, `height`, `alt`)
 - `type`, `lang`, `locale`, `colorScheme` if not the defaults
 
-Leave `url: siteUrl` alone — it resolves from the environment (step 4).
+Leave `url: resolveSiteUrl()` alone — it resolves from the environment (step 4).
 
 ## 2. Environment schemas — `lib/client-env.ts` and `lib/server-env.ts`
 Both are Zod schemas parsed at import time, so a missing/invalid var fails fast.
