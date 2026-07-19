@@ -24,8 +24,10 @@ export function resolveSiteUrl(env: NodeJS.ProcessEnv = process.env) {
     throw new Error(`${source} must use http or https; received "${rawSiteUrl}".`);
   }
 
-  if (siteUrl.search || siteUrl.hash) {
-    throw new Error(`${source} must not include a query string or hash; received "${rawSiteUrl}".`);
+  if (siteUrl.pathname !== "/" || siteUrl.search || siteUrl.hash) {
+    throw new Error(
+      `${source} must not include a path, query string, or hash; received "${rawSiteUrl}".`,
+    );
   }
 
   return siteUrl.toString().replace(/\/+$/, "");
