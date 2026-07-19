@@ -46,6 +46,8 @@ The canonical site URL is resolved in this order:
 
 Production builds fail when the URL still points to localhost or the default title,
 description, site name, share image, or image alt text has not been replaced.
+Repository CI uses `ALLOW_PLACEHOLDER_METADATA=true` for the unconfigured template;
+never set this bypass in a deployed environment.
 
 It is exposed to the browser as `NEXT_PUBLIC_SITE_URL` via `lib/client-env.ts`.
 

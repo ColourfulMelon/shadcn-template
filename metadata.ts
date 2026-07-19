@@ -68,7 +68,7 @@ export const siteMetadata = {
   colorScheme: "light dark",
 } satisfies SiteMetadata;
 
-if (process.env.NODE_ENV === "production") {
+if (process.env.NODE_ENV === "production" && process.env.ALLOW_PLACEHOLDER_METADATA !== "true") {
   const siteUrl = new URL(siteMetadata.url);
   const imageUrl = new URL(siteMetadata.image.url, `${siteMetadata.url}/`);
   const placeholderFields = [
