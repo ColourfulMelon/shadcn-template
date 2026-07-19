@@ -4,6 +4,7 @@ const siteUrl = resolveSiteUrl();
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  typedRoutes: true,
   env: {
     NEXT_PUBLIC_SITE_URL: siteUrl,
   },

@@ -14,7 +14,7 @@
     "check": "biome check .",
     "check:ci": "biome ci .",
     "check:fix": "biome check --write .",
-    "typecheck": "tsc --noEmit",
+    "typecheck": "next typegen && tsc --noEmit",
     "prepare": "git config core.hooksPath .githooks || true"
   },
   "dependencies": {
