@@ -8,6 +8,7 @@ Template with basic packages installed and set up. Supports all required metadat
 - [x] Zod for validation, with typed `client-env` / `server-env` helpers
 - [x] Native Next.js sitemap and robots metadata routes
 - [x] Native oEmbed JSON route sourced from `metadata.ts`
+- [x] Baseline security headers with a [documented CSP starting point](docs/security.md)
 - [x] Lucide React icons
 - [x] SVGR — import SVGs as React components (append `?url` for a plain URL)
 - [x] next-themes dark mode (`ThemeProvider` + `dark` variant)
