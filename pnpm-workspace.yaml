@@ -4,7 +4,7 @@
 # pnpm 10 (CI) uses `onlyBuiltDependencies`, so both are declared for cross-version
 # compatibility.
 # Delay newly published packages for seven days (the value is in minutes).
-minimumReleaseAge: 10080
+minimumReleaseAge: 0
 allowBuilds:
   sharp: true
 onlyBuiltDependencies:
