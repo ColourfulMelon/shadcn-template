@@ -14,6 +14,11 @@
       "description": "Wait seven days before proposing pnpm package updates",
       "matchDatasources": ["npm"],
       "minimumReleaseAge": "7 days"
+    },
+    {
+      "description": "Keep TypeScript on the latest Next.js-compatible major",
+      "matchPackageNames": ["typescript"],
+      "allowedVersions": "<7"
     }
   ]
 }
