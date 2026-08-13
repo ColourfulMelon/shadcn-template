@@ -22,7 +22,7 @@ importers:
         version: 2.1.1
       lucide-react:
         specifier: ^1.24.0
-        version: 1.28.0(react@19.2.7)
+        version: 1.29.0(react@19.2.7)
       next:
         specifier: ^16.2.11
         version: 16.3.0(@babel/core@7.29.7)(@types/node@24.13.3)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
@@ -1910,11 +1910,6 @@ packages:
     engines: {node: '>=6.0.0'}
     hasBin: true
 
-  baseline-browser-mapping@2.11.3:
-    resolution: {integrity: sha512-sbT0Ui/CZwyAyy7icT1Gw5P1LKRlFaHwaF6tDCW5YHq2X5SeeZFphBuIagopSfwSSZq3sQcbmEL072yphxm7ew==}
-    engines: {node: '>=6.0.0'}
-    hasBin: true
-
   boolbase@1.0.0:
     resolution: {integrity: sha512-JZOSA7Mo9sNGB8+UjSgzdLtokWAky1zbztM3WRLCbZ70/3cTANmQmOdR7y2g+J0e2WXywy1yS468tY+IruqEww==}
 
@@ -2179,8 +2174,8 @@ packages:
   lru-cache@5.1.1:
     resolution: {integrity: sha512-KpNARQA3Iwv+jTA0utUVVbrh+Jlrr1Fv0e56GGzAFOXN7dk/FviaDW8LHmK52DlcH4WP2n6gI8vN1aesBFgo9w==}
 
-  lucide-react@1.28.0:
-    resolution: {integrity: sha512-fARAFJULsGuDDydjp6+6blekG/sBIM29TerzLjc9bQUKAcEfrSc4ZQKb25KRz4OMKd87cZTb5dgq0w/T6KufVg==}
+  lucide-react@1.29.0:
+    resolution: {integrity: sha512-Xs9QFG5+9sNX04MdKVT4++umA+hJ2qsJVlRlRWHQ7qZobXgMiNHSpZ5eZm8JUoGCdNyoEdXoEwa8HVr0DNjOQg==}
     peerDependencies:
       react: ^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0
 
@@ -4452,13 +4447,11 @@ snapshots:
 
   baseline-browser-mapping@2.11.12: {}
 
-  baseline-browser-mapping@2.11.3: {}
-
   boolbase@1.0.0: {}
 
   browserslist@4.28.1:
     dependencies:
-      baseline-browser-mapping: 2.11.3
+      baseline-browser-mapping: 2.11.12
       caniuse-lite: 1.0.30001806
       electron-to-chromium: 1.5.302
       node-releases: 2.0.27
@@ -4669,7 +4662,7 @@ snapshots:
     dependencies:
       yallist: 3.1.1
 
-  lucide-react@1.28.0(react@19.2.7):
+  lucide-react@1.29.0(react@19.2.7):
     dependencies:
       react: 19.2.7
 
