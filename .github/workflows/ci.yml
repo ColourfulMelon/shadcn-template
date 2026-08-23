@@ -35,4 +35,4 @@ jobs:
         run: pnpm build
         env:
           ALLOW_PLACEHOLDER_METADATA: "true"
-          SITE_URL: https://example.com
+          NEXT_PUBLIC_VERCEL_PROJECT_PRODUCTION_URL: example.com
