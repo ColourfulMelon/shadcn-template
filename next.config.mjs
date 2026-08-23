@@ -1,6 +1,3 @@
-import { resolveSiteUrl } from "./site-url.mts";
-
-const siteUrl = resolveSiteUrl();
 const isDevelopment = process.env.NODE_ENV === "development";
 const contentSecurityPolicy = [
   "default-src 'self'",
@@ -62,9 +59,6 @@ const nextConfig = {
         headers: securityHeaders,
       },
     ];
-  },
-  env: {
-    NEXT_PUBLIC_SITE_URL: siteUrl,
   },
   images: {
     remotePatterns: [

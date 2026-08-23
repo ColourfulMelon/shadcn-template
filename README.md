@@ -39,23 +39,19 @@ staged files; use `pnpm check:fix` to apply safe formatting and import fixes.
 
 ## Site URL
 
-The canonical site URL is resolved in this order:
-
-1. `SITE_URL` from the environment / `.env`
-2. `https://$VERCEL_PROJECT_PRODUCTION_URL` (set automatically on Vercel)
-3. `http://localhost:3000`
+The canonical site URL uses `NEXT_PUBLIC_VERCEL_PROJECT_PRODUCTION_URL`, which Vercel
+provides as a hostname without a protocol. The app prepends `https://` when constructing
+the URL.
 
 Production builds fail when the URL still points to localhost or the default title,
 description, site name, share image, or image alt text has not been replaced.
 Repository CI uses `ALLOW_PLACEHOLDER_METADATA=true` for the unconfigured template;
 never set this bypass in a deployed environment.
 
-It is exposed to the browser as `NEXT_PUBLIC_SITE_URL` via `lib/client-env.ts`.
-
 ## After cloning — to do
 
 - [ ] Update the favicon in `public/`
 - [ ] Update the site metadata in `metadata.ts`
 - [ ] Populate `lib/client-env.ts` and `lib/server-env.ts` with your environment variables
-- [ ] Copy `.env.example` to `.env` and set `SITE_URL` (optional on Vercel)
+- [ ] Copy `.env.example` to `.env` for local development
 - [ ] Replace the placeholder Header and Footer
