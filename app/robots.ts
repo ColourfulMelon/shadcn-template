@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-import { clientEnv } from "@/lib/client-env";
+import { productionUrl } from "@/lib/client-env";
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -8,6 +8,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: new URL("/sitemap.xml", clientEnv.NEXT_PUBLIC_SITE_URL).toString(),
+    sitemap: new URL("/sitemap.xml", productionUrl).toString(),
   };
 }

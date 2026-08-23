@@ -21,7 +21,7 @@ values:
 - `image` — the 1200×630 social share image (`url`, `width`, `height`, `alt`)
 - `type`, `lang`, `locale`, `colorScheme` if not the defaults
 
-Leave `url: resolveSiteUrl()` alone — it resolves from the environment (step 4).
+Leave `url: productionUrl` alone — it resolves from the environment (step 4).
 
 ## 2. Environment schemas — `lib/client-env.ts` and `lib/server-env.ts`
 Both are Zod schemas parsed at import time, so a missing/invalid var fails fast.
@@ -37,9 +37,9 @@ Copy `.env.example` to `.env`. Add any new vars from step 2 to **both** `.env` a
 commit real secrets.
 
 ## 4. Site URL
-The canonical URL resolves as `SITE_URL` → `https://$VERCEL_PROJECT_PRODUCTION_URL` →
-`http://localhost:3000`. On Vercel you can skip `SITE_URL`; for other hosts set it in
-`.env`. It's exposed to the browser as `NEXT_PUBLIC_SITE_URL`.
+The canonical URL is derived from `NEXT_PUBLIC_VERCEL_PROJECT_PRODUCTION_URL`, which
+Vercel provides as a hostname. The app prepends `https://`. Set the hostname in `.env`
+for local development.
 
 ## 5. Favicon & assets — `public/`
 Replace `public/favicon.ico`. Add the social share image referenced in `metadata.ts`

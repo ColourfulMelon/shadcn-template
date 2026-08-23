@@ -1,5 +1,5 @@
 import type { Viewport } from "next";
-import { resolveSiteUrl } from "./site-url.mts";
+import { productionUrl } from "./lib/client-env";
 
 type OpenGraphType =
   | "website"
@@ -49,7 +49,7 @@ export const siteMetadata = {
   description: "Description",
   type: "website",
   siteName: "SiteName",
-  url: resolveSiteUrl(),
+  url: productionUrl,
   lang: "en",
   locale: "en_US",
   author: "Dev3.Studio",
@@ -82,7 +82,7 @@ if (process.env.NODE_ENV === "production" && process.env.ALLOW_PLACEHOLDER_METAD
 
   if (placeholderFields.length > 0) {
     throw new Error(
-      `Production metadata is not configured: ${placeholderFields.join(", ")}. Update metadata.ts and SITE_URL before building.`,
+      `Production metadata is not configured: ${placeholderFields.join(", ")}. Update metadata.ts and NEXT_PUBLIC_VERCEL_PROJECT_PRODUCTION_URL before building.`,
     );
   }
 }
