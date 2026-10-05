@@ -13,4 +13,4 @@ fi
 cd "$root" || exit 1
 
 echo "▶ Checking staged files with Biome…"
-exec "$biome" check --staged
+exec "$biome" check --staged --no-errors-on-unmatched
